@@ -107,14 +107,6 @@ li:hover {
   transform: translateY(-2px);
 }
 
-.money-img {
-  width: 90px;
-  margin: 30px auto;
-  display: block;
-  animation: float 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 10px #ffb6d9);
-}
-
 .completed-text {
   color: #6cbf84;
   font-style: italic;
@@ -127,40 +119,35 @@ li:hover {
 }
 
 .emoji-banner {
-    font-size: 20px;
-    text-align: center;
-    margin: 10px 0;
-    color: #7ed6a3;
-    animation: popIn 1s ease-in-out;
-  }
+  font-size: 20px;
+  text-align: center;
+  margin: 10px 0;
+  color: #7ed6a3;
+  animation: popIn 1s ease-in-out;
+}
 
-  .delete-btn {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #a8dadc;
-    color: #333;
-    border: none;
-    border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(168, 218, 220, 0.4);
-    transition: all 0.3s ease;
-  }
+.delete-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #a8dadc;
+  color: #333;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(168, 218, 220, 0.4);
+  transition: all 0.3s ease;
+}
 
-  .delete-btn:hover {
-    background-color: #457b9d;
-    color: #fff;
-    transform: scale(1.05);
-  }
+.delete-btn:hover {
+  background-color: #457b9d;
+  color: #fff;
+  transform: scale(1.05);
+}
 
 @keyframes popIn {
-    0% { transform: scale(0); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
-  }
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 ul::-webkit-scrollbar {
@@ -174,4 +161,61 @@ ul::-webkit-scrollbar-thumb {
 
 ul::-webkit-scrollbar-track {
   background: #ffe6f0;
+}
+
+
+@media (max-width: 713px) {
+  .todo-box {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .left, .right {
+    width: 100%;
+    border-width: 2px;
+    padding: 15px;
+  }
+
+  input[type="text"] {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .right-header {
+    font-size: 20px;
+  }
+
+  li {
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+
+  .completed-text {
+    font-size: 18px;
+  }
+
+  .emoji-banner {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .delete-btn {
+    padding: 8px 12px;
+    font-size: 15px;
+    margin-top: 15px;
+  }
+
+  .clear-btn {
+    font-size: 15px;
+  }
+
+  .container {
+    padding: 10px;
+  }
 }
