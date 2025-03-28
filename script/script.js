@@ -41,12 +41,12 @@ class Task {
       this.saveToLocalStorage();
       this.render();
     }
-
+  
     clearCompleted() {
-        this.tasks = this.tasks.filter(task => !task.completed);
-        this.saveToLocalStorage();
-        this.render();
-      }
+      this.tasks = this.tasks.filter(task => !task.completed);
+      this.saveToLocalStorage();
+      this.render();
+    }
   
     saveToLocalStorage() {
       localStorage.setItem("todo-tasks", JSON.stringify(this.tasks));
@@ -61,7 +61,7 @@ class Task {
   
     render() {
       this.taskListRight.innerHTML = "";
-      this.taskListLeft.innerHTML = `<img src="money.png" alt="money" class="money-img" />`;
+      this.taskListLeft.innerHTML = `<div class="emoji-banner">🎉 You're doing great! 🎉</div>`;
   
       this.tasks.forEach(task => {
         const li = document.createElement("li");
