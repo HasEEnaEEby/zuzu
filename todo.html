@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="Css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-box">
+        <div class="left">
+          <input type="text" id="taskInput" placeholder="ADD" />
+          <p>Completed task</p>
+          <ul class="tasks-container" id="taskListLeft">
+            <div class="emoji-banner">🎉 You're doing great! 🎉</div>
+          </ul>
+          <button onclick="taskManager.addTask()" class="add-btn">add</button>
+          <button onclick="taskManager.clearCompleted()" class="delete-btn">
+            delete history
+          </button>
+        </div>
+
+        <div class="right">
+          <div class="right-header">
+            <span>Add a task</span>
+          </div>
+          <ul id="taskListRight"></ul>
+          <button onclick="taskManager.clearAll()" class="clear-btn">
+            clear all
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>
